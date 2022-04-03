@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+    background-color: blanchedalmond;
+}
+
+.logoPrincipal {
+    height: 13vh;
+}
+
+.listaOrdenada {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    gap: 5vh;
+    text-transform: uppercase;
+   
+}
+a {color: #000}
+main
+{
+    background: url("../Imagens/Gang.png") no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+}
