@@ -2,40 +2,69 @@
 <html lang="pt-BR">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Banana Gang</title>
-	<meta name="description" content="Site para o app de música do banana gang">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="icon" href="Imagens/Banana.jpg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Gang</title>
+    <meta name="description" content="Site para o app de música do banana gang">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="Imagens/Banana.jpg">
+    <script type="text/javascript" src="index.js"></script>
+
 </head>
 
 <body>
-	<header class="cabecalho">
-		<img class=logoPrincipal src="Imagens/Banana.jpg">
-		<nav class="navList">
-			<ul class="listaOrdenada">
-				<li class="menuItem"><a href="#">Início</a></li>
-				<li class="menuItem"><a href="#">Fórum</a</li>
-				<li class="menuItem"><a href="#">Séries</a></li>
-				<li class="menuItem"><a href="#">Quem somos</a></li>
-				<li class="menuItem"><a href="#">Servidores</a></li>
-				<li role="separator">│</li>
-				<li class="menuItem"><a href="#">Login</a></li>
-			</ul>
-		</nav>
-	</header>
+    <header class="cabecalho">
+        <img class=logoPrincipal src="Imagens/Banana.jpg">
+        <nav class="navList">
+            <ul class="listaOrdenada">
+                <li class="menuItem"><a href="#">Início</a></li>
+                <li class="menuItem"><a href="#">Fórum</a></li>
+                <li class="menuItem"><a href="#">Séries</a></li>
+                <li class="menuItem"><a href="#">Quem somos</a></li>
+                <li class="menuItem"><a href="#">Servidores</a></li>
+                <li role="separator">│</li>
+                <li class="menuItem">
+                    <a class="botaoLogin" onclick="getElementById('formLogin').style.display='block'"><p>Login</p></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="formLogin" class="Login">
+        <span onclick="getElementById('formLogin').style.display='none'" class="fechar" title="Fechar Login">&times;</span>
 
-	<main>
-		
-	</main>
+        <form class="login-content animate" action="/action_page.php">
+            <div class="imgcontainer" class="avatar"></div>
+            <div class="container">
+                <label for="Usuario"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="Usuario" required>
 
-	<footer>
-		<div>
-			Copyright © 2022 Banana Dev
-		</div>
-	</footer>
+                <label for="Senha"><b>Password</b></label>
+                <input type="password" placeholder="Enter password" name="Senha" required>
+
+                <button class="botao" type="submit">Login</button>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="lembrar">Remember me
+                </label>
+            </div>
+            <div class="container" style="background-color: #f1f1f1;">
+                <button class="botao" type="button" onclick="getElementById('formLogin').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+
+        </form>
+    </div>
+
+    <main>
+
+    </main>
+
+    <footer>
+        <div class="direitosAutorais">
+            <p>Copyright © 2022 Banana Dev</p>
+            <p>"Bater em mulher não é tão errado assim"</p>
+        </div>
+    </footer>
 </body>
 
 </html>
